@@ -1,0 +1,71 @@
+<html>
+<head>
+   <title> Language App By Shrusti Tambe </title>
+          <style>
+             *{font-size:60px;font-family: "Times New Roman", Times, serif;}
+              body{background-color:#DDA0DD;}
+              h1{background-color:black;color:white;width:400px;border-radius:40px;}
+              .btn{width:20%;background-color:#FFC0CB;color:black;border-radius:5%}
+              input[type="radio"]{width:2%;height:0.8em;}
+          </style>
+</head>
+<body>
+<center>
+      <h1> Language  App</h1>
+      <form onsubmit="show()">
+          <input type="text" placeholder="enter your name" id="name"/>
+          </br></br>
+          <input type="checkbox" id="js"/>Java Script
+          <input type="checkbox" id="ja"/>Java 
+          <input type="checkbox" id="py"/>Python
+          </br></br>
+          <input type="submit" Class="btn"/>
+      </form>
+      <h2 id="msg"/>
+     
+      <script>
+           function show()
+           {
+                event.preventDefault();
+                let name=document.getElementById("name");
+                let js=document.getElementById("js");
+                let ja=document.getElementById("ja");
+                let py=document.getElementById("py");
+                let msg=document.getElementById("msg");if(name.value=="")
+                  
+
+                      if(name.value=="")
+       {
+       alert("name cannot be blank spaces");
+       msg.innerHTML="";
+       name.focus();
+       return;
+     }
+
+
+              
+
+                let choice="";
+                if(js.checked)       choice+="Java Script";
+                if(ja.checked)       choice+="Java";
+                if(py.checked)       choice+="python";
+  
+                if(choice.length==0)
+                    choice="then learn something!";
+
+         
+                  let ans="name="+name.value+" Choice="+choice;
+                  msg.innerHTML=ans;
+           }
+        
+ </script>
+</center>
+</body>
+</html>
+
+                
+
+
+                
+               
+
